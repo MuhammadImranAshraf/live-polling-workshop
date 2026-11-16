@@ -6,8 +6,6 @@ To ensure strict consistency across all machines, follow every specification bel
 
 ## 1. Project Directory Structure
 
-**Project destination:** unless the user names a different location, create the project in a `live-polling` directory on the user's Desktop (`~/Desktop/live-polling`). Create the directory if it does not already exist (if it already exists, reuse it and never delete or overwrite unrelated files in it). `live-polling` is the project root; `backend` and `frontend` sit directly inside it (do not nest another project folder).
-
 Create two separate, connected TypeScript projects:
 
 - `live-polling/backend` (Node.js + Express + Mongoose + JWT + TypeScript, running on port `5001`)
@@ -79,13 +77,6 @@ Export `buildSignupDevice(req: Request, client: unknown): SignupDevice`, used on
 - **iPadOS detection:** if the resolved `os` is `macOS` and `maxTouchPoints > 1`, set `os = "iPadOS"`, `deviceType = "tablet"`, and `osVersion = ""` (the UA only exposes a frozen macOS version, so do not store a wrong one).
 - **Generated `deviceName`:** `"<model> (<os> <osVersion>)"` when a real model is known (not the bare `iPhone` / `iPad`), otherwise `"<os> <osVersion> <deviceType>"` (e.g. `Pixel 7 (Android 14)`, `Windows 11 desktop`).
 - Missing or malformed `device` input must never fail signup: fall back to User-Agent-only data.
-
-If `QuestionModel.countDocuments() === 0`, seed 2 starter questions:
-
-1. `"How is the MERN + TypeScript workshop pace right now?"` with options:
-   - 🔥 `Crystal Clear` (`count: 3`), 🚀 `Ready to Code` (`count: 2`), 🤔 `A Bit Fast` (`count: 1`), ☕ `Need Coffee` (`count: 1`), and one voter record for `STU-2026-01` (`Ali Khan`) on `crystal_clear`.
-2. `"Which layer of the MERN stack are you most excited to build?"` with options:
-   - 🎨 `React + TypeScript UI` (`count: 2`), ⚡ `Node & Express REST API` (`count: 2`), 🗄️ `MongoDB & Mongoose` (`count: 1`), 🛡️ `Connecting Everything` (`count: 3`).
 
 ### REST API Endpoints & Auth Rules
 
