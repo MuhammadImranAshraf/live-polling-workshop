@@ -8,9 +8,9 @@ To ensure strict consistency across all machines, follow every specification bel
 
 Create two separate, connected TypeScript projects:
 
-- `live-polling/backend` (Node.js + Express + Mongoose + JWT + TypeScript, running on port `5001`)
-- `live-polling/frontend` (React 18 + Vite + Tailwind CSS v4 + Lucide React + TypeScript, running on port `5173`)
-- `live-polling/.gitignore` (ignoring `node_modules/`, `dist/`, `.env`, `.DS_Store`, `*.log`, `*.tsbuildinfo`)
+- `backend` (Node.js + Express + Mongoose + JWT + TypeScript, running on port `5001`)
+- `frontend` (React 18 + Vite + Tailwind CSS v4 + Lucide React + TypeScript, running on port `5173`)
+- `.gitignore` (ignoring `node_modules/`, `dist/`, `.env`, `.DS_Store`, `*.log`, `*.tsbuildinfo`)
 
 Include `.env.example` in BOTH `backend` and `frontend`:
 
