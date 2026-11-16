@@ -14,7 +14,7 @@ Create two separate, connected TypeScript projects:
 
 Include `.env.example` in BOTH `backend` and `frontend`:
 
-- `backend/.env.example` (and `backend/.env`, same values):
+- `backend/.env.example`:
   PORT=5001
   MONGODB_URI=mongodb+srv://polling_db_user:polling_db_password@polling.omanrjh.mongodb.net/polling_db
   JWT_SECRET=your-secret-jwt-key-here
